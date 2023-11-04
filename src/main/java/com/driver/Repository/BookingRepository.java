@@ -10,8 +10,7 @@ import java.util.UUID;
 @Repository
 public class BookingRepository {
 
-    @Autowired
-    HotelRepository hotelRepository;
+    HotelRepository hotelRepository = new HotelRepository();
     HashMap<String, Booking> bookingDatabase = new HashMap<>();
 
     public void bookARoom(Booking booking){
