@@ -32,10 +32,11 @@ public class BookingRepository {
     }
 
     public int getBookings(int aadharCard){
+
         int count = 0;
         for(String booking : bookingDatabase.keySet()){
             Booking obj = bookingDatabase.get(booking);
-            if(obj.getBookingAadharCard() == aadharCard){
+            if( obj != null && obj.getBookingAadharCard() == aadharCard){
                 count++;
             }
         }

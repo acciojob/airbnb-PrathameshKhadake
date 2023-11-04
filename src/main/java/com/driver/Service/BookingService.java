@@ -15,6 +15,7 @@ public class BookingService {
 
     public int bookARoom(Booking booking){
 
+
         int noOfRoomsToBook = booking.getNoOfRooms();
         String hotelName = booking.getHotelName();
         int availableRoomsInGivenHotel = hotelRepository.getAvailableRooms(hotelName);
