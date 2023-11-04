@@ -8,7 +8,7 @@ import java.util.HashMap;
 @Repository
 public class UserRepository {
 
-    HashMap<Integer, User> userDatabase = new HashMap<>();
+    private HashMap<Integer, User> userDatabase = new HashMap<>();
 
     public void addUser(User user){
         userDatabase.put(user.getaadharCardNo(), user);

@@ -11,7 +11,7 @@ import java.util.UUID;
 public class BookingRepository {
 
     HotelRepository hotelRepository = new HotelRepository();
-    HashMap<String, Booking> bookingDatabase = new HashMap<>();
+    private HashMap<String, Booking> bookingDatabase = new HashMap<>();
 
     public void bookARoom(Booking booking){
 

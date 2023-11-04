@@ -10,7 +10,7 @@ import java.util.List;
 @Repository
 public class HotelRepository {
 
-    HashMap<String, Hotel> hotelDatabase = new HashMap<>();
+    private HashMap<String, Hotel> hotelDatabase = new HashMap<>();
 
     public String addHotel(Hotel hotel){
         if(hotelDatabase.containsKey(hotel.getHotelName())){
@@ -30,8 +30,8 @@ public class HotelRepository {
             if(max < facility){
                 max = facility;
                 hotel_name = name;
-            }else if(facility != 0 && max == facility){
-                if(name.length() < hotel_name.length()){
+            }else if(max == facility){
+                if(name.compareTo(hotel_name) < 0){
                     hotel_name = name;
                 }
             }

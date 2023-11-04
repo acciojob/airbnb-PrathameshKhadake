@@ -19,13 +19,15 @@ public class BookingService {
         int noOfRoomsToBook = booking.getNoOfRooms();
         String hotelName = booking.getHotelName();
         int availableRoomsInGivenHotel = hotelRepository.getAvailableRooms(hotelName);
+
         if(noOfRoomsToBook <= availableRoomsInGivenHotel){
             bookingRepository.bookARoom(booking);
             hotelRepository.setAvailableRooms(hotelName, noOfRoomsToBook);
             return booking.getAmountToBePaid();
+        }else{
+            return -1;
         }
 
-        return -1;
 
     }
 
